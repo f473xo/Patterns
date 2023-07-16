@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}
+Список курсов
+{% endblock %}
+{% block style %}
+{% include "inc-style.html" %}
+{% endblock %}
+{% block menu %}
+{% include "top-menu.html" %}
+{% endblock %}
+{% block body %}
+<a href="/">назад</a>
+
+<h1>Список категорий</h1>
+
+<ul>
+    {% for category in categories %}
+    {{ render_category(category) | safe }}
+    {% endfor %}
+</ul>
+
+{% endblock %}
+
+
